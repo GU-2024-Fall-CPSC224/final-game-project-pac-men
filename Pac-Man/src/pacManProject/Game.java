@@ -4,10 +4,11 @@ import java.awt.*;
 import javax.swing.*;
 
 import entity.Player;
+import objects.SuperObject;
 import tile.MapManager;
 	@SuppressWarnings("serial")
 	public class Game extends JPanel implements Runnable{
-	
+		public int score = 0;
 		public int rowCount = 31;
 		public int columnCount = 28;
 		int scale = 2;
@@ -21,9 +22,11 @@ import tile.MapManager;
 		MapManager tileM = new MapManager(this);
 		UserInput userInput = new UserInput();
 		Thread gameThread; // allows time to exist in the game
-		Player player = new Player(this,userInput);
+		public Player player = new Player(this,userInput);
 		public CollisionDetection cDet = new CollisionDetection(this);
-		
+		public SuperObject so = new SuperObject();
+		public SuperObject obj[] = new SuperObject[28*32];
+		public ObjectPlacer oPlacer = new ObjectPlacer(this);
 		
 		public static JFrame frame = new JFrame("Pac Man");
 		Game(){
@@ -33,6 +36,12 @@ import tile.MapManager;
 			this.addKeyListener(userInput);
 			this.setFocusable(true);
 		}
+		
+		public void setupPellets() {
+			so.loadPelletMap(this);
+			oPlacer.placeObject();
+		}
+		
 		private void buildFrame() {
 		
 		frame.setSize(boardWidth, boardHeight);
@@ -41,13 +50,14 @@ import tile.MapManager;
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		}
 		
-		public void buildBackground() {
+		public void buildGame() {
 			this.buildFrame();
 			frame.add(this);
 			frame.pack();
 			
 			
 			frame.setVisible(true);
+			this.setupPellets();
 		
 		}
 		public void startGameThread() {
@@ -85,13 +95,18 @@ import tile.MapManager;
 			
 		}
 		public void paintComponent(Graphics g) {
-			
+			int oldScore = score;
 			super.paintComponent(g);
 			
 			Graphics2D g2 = (Graphics2D)(g);
 			tileM.draw(g2);
+			for(int i=0; i<obj.length;i++) {
+			if(obj[i]!=null) {
+			obj[i].draw(g2,this);}}
 			player.draw(g2);
-			
+//			if(score>oldScore) {
+				System.out.println("Score: "+score);
+//			}
 			
 			g2.dispose(); // like .close()
 		}

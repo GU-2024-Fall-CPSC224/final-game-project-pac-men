@@ -12,15 +12,17 @@ import pacManProject.*;
 public class Player extends Entity {
 	Game gm;
 	UserInput userInput;
-	
+	String oldDirection;
 	public Player(Game gm, UserInput userInput) {
 		this.gm = gm;
 		this.userInput = userInput;
-		
-		setDefaultValues();
 		direction = "right";
-		getPlayerImage();
+		
 		collisionArea = new Rectangle(0,0,30,30);
+		collisionAreaDefaultX = collisionArea.x;
+		collisionAreaDefaultY = collisionArea.y;
+		setDefaultValues();
+		getPlayerImage();
 	}
 	public void getPlayerImage() {
 		try {
@@ -46,37 +48,62 @@ public class Player extends Entity {
 	public void update() {
 		
 		if(userInput.upPressed) {
-			direction = "up";
+			collisionOn = false;
+			gm.cDet.checkUp(this);
+			if(!collisionOn) {
+				direction = "up";}
+			else {direction = oldDirection;}
+		}
 			
-		}
+		
 		else if(userInput.downPressed) {
-			direction = "down";
+			collisionOn = false;
+			gm.cDet.checkDown(this);
+			if(!collisionOn) {
+				direction = "down";}
+			else {direction = oldDirection;}
 		}
+			
+		
 		else if(userInput.rightPressed) {
-			direction = "right";
+			collisionOn = false;
+			gm.cDet.checkRight(this);
+			if(!collisionOn) {
+				direction = "right";}
+			else {direction = oldDirection;}
 		}
 		else if(userInput.leftPressed) {
-			direction = "left";
+			collisionOn = false;
+			gm.cDet.checkLeft(this);
+			if(!collisionOn) {
+				direction = "left";}
+			else {direction = oldDirection;}
+		
 		}
 		collisionOn = false;
 		gm.cDet.checkTile(this);
-		
+		int objIndex =gm.cDet.checkObject(this,true);
+		collectPellet(objIndex);
 		
 		if(collisionOn == false) {
 			
 			switch(direction) {
 			case "up":
+				oldDirection =direction;
 				
 				y-=speed;
 				break;
 			
 			case "down":
+				oldDirection =direction;
 				y+=speed;
 				break;
 			case "left":
+				oldDirection =direction;
 				x-=speed;
 				break;
 			case "right":
+				oldDirection =direction;
 				x+=speed;
 				break;
 		}}
@@ -141,6 +168,14 @@ public class Player extends Entity {
 		
 		}
 		g2.drawImage(image,x,y,gm.TILESIZE,gm.TILESIZE,null);
+		
+		
+	}
+	public void collectPellet(int index) {
+		if(index!=999) {
+			gm.obj[index]=null;
+			gm.score+=10;
+		}
 		
 		
 	}
