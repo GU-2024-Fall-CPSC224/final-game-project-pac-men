@@ -73,7 +73,7 @@ public class Player extends Entity {
 	public void setDefaultValues() {
 		x = 32*20-16;
 		y = 32*23;
-		speed = 8;
+		speed = 4;
 		currentLives = 3;
 		StartingX = 32*20-16;
 		StartingY = 32*23;
