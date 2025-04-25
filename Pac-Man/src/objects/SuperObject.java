@@ -16,7 +16,7 @@ public class SuperObject {
 	public int[][] pelletMapNum;
 	SuperObject[] pelletTypes= new SuperObject[3];
 	public BufferedImage image;
-	String name;
+	public String name;
 	public boolean collison = false;
 	public int worldX,worldY;
 	public Rectangle solidArea = new Rectangle(32,32,25,25);

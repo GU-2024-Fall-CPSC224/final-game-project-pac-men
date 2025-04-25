@@ -18,7 +18,7 @@ public class MapManager {
 	public int mapTileNum[][];
 	public MapManager(Game gm) {
 		this.gm = gm;
-		mapTile = new MapTile[15]; // just wall tile for now
+		mapTile = new MapTile[24]; // just wall tile for now
 		mapTileNum = new int[gm.columnCount][gm.rowCount];
 		getTileImage();
 		loadMap();
@@ -26,50 +26,67 @@ public class MapManager {
 	}
 	public void getTileImage() {
 		try {
-			mapTile[0] = new MapTile();
-			mapTile[0].image= ImageIO.read(getClass().getResourceAsStream("/tile/BackgroundBlack.png"));
+			for(int i =0;i<23;i++) {
+				mapTile[i] = new MapTile();
+			}
+			for(int i =2;i<23;i++) {
+				if(i!=10) {
+				mapTile[i].collision = true;}
+			}
+			if(gm.hardMode) {
+				mapTile[0].image= ImageIO.read(getClass().getResourceAsStream("/tile/BackgroundBlack.png"));
+				mapTile[1].image= ImageIO.read(getClass().getResourceAsStream("/tile/BackgroundBlack.png")); // teleporter to opposite side
+				mapTile[2].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-10.png.png"));
+				mapTile[3].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-3.png.png"));		
+				mapTile[4].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-4.png.png"));
+				mapTile[5].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-5.png.png"));	
+				mapTile[6].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-6.png.png"));	
+				mapTile[7].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-8.png.png"));	
+				mapTile[8].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-7.png.png"));
+				mapTile[9].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-9.png.png"));
+				
+				mapTile[11].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-11.png.png"));
+				mapTile[12].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-12.png.png"));
+				mapTile[13].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-13.png.png"));
+				mapTile[14].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-14.png.png"));
+				
+				mapTile[15].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-1.png.png"));
+				mapTile[16].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-2.png.png"));
+				mapTile[17].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-3.png.png"));
+				mapTile[18].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-4.png.png"));
+				mapTile[19].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-5.png.png"));
+				mapTile[20].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-6.png.png"));
+				mapTile[21].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-7.png.png"));
+				mapTile[22].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-8.png.png"));
+			}
+			else {
+				mapTile[0].image= ImageIO.read(getClass().getResourceAsStream("/tile/BackgroundBlack.png"));
+				mapTile[1].image= ImageIO.read(getClass().getResourceAsStream("/tile/BackgroundBlack.png")); // teleporter to opposite side
+				mapTile[2].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sideways-D.png"));
+				mapTile[3].image= ImageIO.read(getClass().getResourceAsStream("/tile/UpWall-L.png"));		
+				mapTile[4].image= ImageIO.read(getClass().getResourceAsStream("/tile/UpWall-R.png"));
+				mapTile[5].image= ImageIO.read(getClass().getResourceAsStream("/tile/Corner-UpR.png"));	
+				mapTile[6].image= ImageIO.read(getClass().getResourceAsStream("/tile/Corner-UpL.png"));	
+				mapTile[7].image= ImageIO.read(getClass().getResourceAsStream("/tile/Corner-DownR.png"));	
+				mapTile[8].image= ImageIO.read(getClass().getResourceAsStream("/tile/Corner-DownL.png"));
+				mapTile[9].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sideways-U.png"));
+				
+				mapTile[11].image= ImageIO.read(getClass().getResourceAsStream("/tile/InnerCorner-DownLeft.png"));
+				mapTile[12].image= ImageIO.read(getClass().getResourceAsStream("/tile/InnerCorner-DownRight.png"));
+				mapTile[13].image= ImageIO.read(getClass().getResourceAsStream("/tile/InnerCorner-UpLeft.png"));
+				mapTile[14].image= ImageIO.read(getClass().getResourceAsStream("/tile/InnerCorner-UpRight.png"));
+				
+				mapTile[15].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-1.png.png"));
+				mapTile[16].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-2.png.png"));
+				mapTile[17].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-3.png.png"));
+				mapTile[18].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-4.png.png"));
+				mapTile[19].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-5.png.png"));
+				mapTile[20].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-6.png.png"));
+				mapTile[21].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-7.png.png"));
+				mapTile[22].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-8.png.png"));
+			}
 			
-			mapTile[1] = new MapTile();
-			mapTile[1].image= ImageIO.read(getClass().getResourceAsStream("/tile/wall.png"));
 			
-			mapTile[3] = new MapTile();
-			mapTile[3].image= ImageIO.read(getClass().getResourceAsStream("/tile/UpWall-L.png"));
-			mapTile[4] = new MapTile();
-			mapTile[4].image= ImageIO.read(getClass().getResourceAsStream("/tile/UpWall-R.png"));
-			mapTile[5] = new MapTile();
-			mapTile[5].image= ImageIO.read(getClass().getResourceAsStream("/tile/Corner-UpR.png"));
-			mapTile[6] = new MapTile();
-			mapTile[6].image= ImageIO.read(getClass().getResourceAsStream("/tile/Corner-UpL.png"));
-			mapTile[7] = new MapTile();
-			mapTile[7].image= ImageIO.read(getClass().getResourceAsStream("/tile/Corner-DownR.png"));
-			mapTile[8] = new MapTile();
-			mapTile[8].image= ImageIO.read(getClass().getResourceAsStream("/tile/Corner-DownL.png"));
-			mapTile[9] = new MapTile();
-			mapTile[9].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sideways-U.png"));
-			mapTile[2] = new MapTile();
-			mapTile[2].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sideways-D.png"));
-			
-			mapTile[11] = new MapTile();
-			mapTile[11].image= ImageIO.read(getClass().getResourceAsStream("/tile/InnerCorner-DownLeft.png"));
-			mapTile[12] = new MapTile();
-			mapTile[12].image= ImageIO.read(getClass().getResourceAsStream("/tile/InnerCorner-DownRight.png"));
-			mapTile[13] = new MapTile();
-			mapTile[13].image= ImageIO.read(getClass().getResourceAsStream("/tile/InnerCorner-UpLeft.png"));
-			mapTile[14] = new MapTile();
-			mapTile[14].image= ImageIO.read(getClass().getResourceAsStream("/tile/InnerCorner-UpRight.png"));
-			mapTile[1].collision = false;
-			mapTile[2].collision = true;
-			mapTile[3].collision = true;
-			mapTile[4].collision = true;
-			mapTile[5].collision = true;
-			mapTile[6].collision = true;
-			mapTile[7].collision = true;
-			mapTile[8].collision = true;
-			mapTile[9].collision = true;
-			mapTile[11].collision = true;
-			mapTile[12].collision = true;
-			mapTile[13].collision = true;
-			mapTile[14].collision = true;
 			
 			
 			
@@ -79,6 +96,10 @@ public class MapManager {
 		catch(IOException e) {
 			e.printStackTrace();
 		}
+	}
+	public void reloadMap() {
+		getTileImage();
+		loadMap();
 	}
 	public void loadMap() {
 		try {

@@ -212,4 +212,37 @@ public class CollisionDetection {
 			
 			return index;
 		}
+		public int checkGhost(Entity entity, Entity[] target) {
+			int index = 999;
+			for(int i = 0; i < target.length; i++) {
+				
+				if(target[i] != null) {
+					entity.collisionArea.x += entity.x;
+					entity.collisionArea.y += entity.y;
+					target[i].collisionArea.x += target[i].x;
+					target[i].collisionArea.y += target[i].y;
+					
+					switch(entity.direction) {
+					case "up": entity.collisionArea.y -= entity.speed;
+					case "down": entity.collisionArea.y += entity.speed;
+					case "left": entity.collisionArea.x -= entity.speed;
+					case "right": entity.collisionArea.x += entity.speed;
+					}
+					
+					if(entity.collisionArea.intersects(target[i].collisionArea)) {
+						if(target[i]!= entity) {
+							index = i;
+						}
+					}
+					entity.collisionArea.x = entity.collisionAreaDefaultX;
+					entity.collisionArea.y = entity.collisionAreaDefaultY;
+					target[i].collisionArea.x = target[i].collisionAreaDefaultX;
+					target[i].collisionArea.y = target[i].collisionAreaDefaultY;
+					
+					
+				}
+				
+			}
+			return index;
+		}
 }

@@ -1,4 +1,5 @@
 package pacManProject;
+import ghosts.*;
 import objects.*;
 public class ObjectPlacer {
 	Game gm;
@@ -7,7 +8,6 @@ public class ObjectPlacer {
 		this.gm = gm;
 	}
 	public void placeObject() {
-		gm.obj[0] = new OBJ_Pellet();
 		int col = 0;
 		int row = 0;
 		int x = 0;
@@ -44,4 +44,23 @@ public class ObjectPlacer {
 		index++;
 	}
 	
-}}
+}
+	public void placeGhost() {
+		if(gm.hardMode) {
+			gm.ghosts[0] = new HardModeGhost(gm).resetPlacement();
+			gm.ghosts[1] = new HardModeGhost(gm).resetPlacement();
+			gm.ghosts[2] = new HardModeGhost(gm).resetPlacement();
+			gm.ghosts[3] = new HardModeGhost(gm).resetPlacement();
+			gm.ghosts[1].x+=32;
+			gm.ghosts[2].x+=64;
+			gm.ghosts[3].x+=96;
+		}
+		else {
+		gm.ghosts[0] = new OrangeGhost(gm).resetPlacement();
+		gm.ghosts[1] = new CyanGhost(gm).resetPlacement();
+		gm.ghosts[2] = new PurpleGhost(gm).resetPlacement();
+		gm.ghosts[3] = new PinkGhost(gm).resetPlacement();}
+		
+	}
+	
+}
