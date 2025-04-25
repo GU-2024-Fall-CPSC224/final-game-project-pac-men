@@ -23,11 +23,13 @@ public class EventHandler {
  public void checkEvent(Entity e) {
 
 	 if(hit(6,14,e)) {
-		 e.x = 33*32 -17;
+		 e.x = 32*32;
+		 e.y = 14*32;
 		 e.direction = "left";
 	 }
 	  if(hit(33,14,e)) {
-		 e.x = 6*32 +17;
+		 e.x = 7*32;
+		 e.y = 14*32;
 		 e.direction = "right";
 	 }
 	 

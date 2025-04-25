@@ -1,7 +1,5 @@
 package ghosts;
 import java.io.IOException;
-import java.util.Random;
-
 import javax.imageio.ImageIO;
 
 import entity.Entity;
@@ -9,10 +7,12 @@ import pacManProject.Game;
 
 public class HardModeGhost extends Entity{
 public HardModeGhost(Game gm) {
+	
 	super(gm);
-	speed = 3;
-	collisionArea.x =1;
-	collisionArea.y =1;
+	released = true;
+	speed = 4;
+	collisionArea.x = 1;
+	collisionArea.y = 1;
 	collisionArea.width = 30;
 	collisionArea.height = 30;
 	collisionAreaDefaultX = collisionArea.x;
@@ -48,27 +48,6 @@ public void setAction() {
 		
 		searchPath(goalCol,goalRow);
 	}
-	
-	else {
-	actionLockCounter ++;
-	if(actionLockCounter == 60) {
-		Random random = new Random();
-		int i = random.nextInt(100)+1;
-		if(i<=25) {
-			direction ="up";
-		}
-		if(i>25 && i<=50) {
-			direction ="right";
-		}
-		if(i>50 && i<=75) {
-			direction ="down";
-		}
-		if(i>75) {
-			direction ="left";
-		}
-		actionLockCounter=0;
-	}}
-	
 	
 }
 }

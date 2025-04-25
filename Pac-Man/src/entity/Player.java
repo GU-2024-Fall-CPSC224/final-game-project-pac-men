@@ -381,7 +381,9 @@ public class Player extends Entity {
 			}
 			else {
 				ghostScore = 200;
+				gm.ghostRelease = 0;
 				loseLife();
+				
 //				direction = "death";
 //				deathAnimation = true;
 				

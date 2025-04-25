@@ -12,6 +12,7 @@ public class DeadGhost extends Entity{
 	
 public DeadGhost(Game gm) {
 		super(gm);
+		released = true;
 		speed = 2;
 		collisionArea.x =1;
 		collisionArea.y =1;
@@ -75,6 +76,10 @@ public void setAction() {
 				else {
 				gm.ghosts[3] = new PinkGhost(gm).resetPlacement();
 			}}
+		}
+		for(int i=0; i< gm.ghosts.length;i++) {
+			if(gm.ghosts[i]!=null) {
+			gm.ghosts[i].released = true;}
 		}
 		searchPath(goalCol,goalRow);
 	}
