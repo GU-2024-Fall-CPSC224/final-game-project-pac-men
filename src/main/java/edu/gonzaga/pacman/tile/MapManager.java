@@ -34,56 +34,56 @@ public class MapManager {
 				mapTile[i].collision = true;}
 			}
 			if(gm.hardMode) {
-				mapTile[22].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-8.png.png"));
-				mapTile[1].image= ImageIO.read(getClass().getResourceAsStream("/tile/BackgroundBlack.png")); // teleporter to opposite side
-				mapTile[2].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-10.png.png"));
-				mapTile[3].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-3.png.png"));		
-				mapTile[4].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-4.png.png"));
-				mapTile[5].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-5.png.png"));	
-				mapTile[6].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-6.png.png"));	
-				mapTile[7].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-8.png.png"));	
-				mapTile[8].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-7.png.png"));
-				mapTile[9].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-9.png.png"));
+				mapTile[22].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/TileSkinny-8.png.png"));
+				mapTile[1].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/BackgroundBlack.png")); // teleporter to opposite side
+				mapTile[2].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTile-10.png.png"));
+				mapTile[3].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTile-3.png.png"));
+				mapTile[4].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTile-4.png.png"));
+				mapTile[5].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTile-5.png.png"));
+				mapTile[6].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTile-6.png.png"));
+				mapTile[7].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTile-8.png.png"));
+				mapTile[8].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTile-7.png.png"));
+				mapTile[9].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTile-9.png.png"));
 				
-				mapTile[11].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-11.png.png"));
-				mapTile[12].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-12.png.png"));
-				mapTile[13].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-13.png.png"));
-				mapTile[14].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTile-14.png.png"));
+				mapTile[11].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTile-11.png.png"));
+				mapTile[12].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTile-12.png.png"));
+				mapTile[13].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTile-13.png.png"));
+				mapTile[14].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTile-14.png.png"));
 				
-				mapTile[15].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-1.png.png"));
-				mapTile[16].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-2.png.png"));
-				mapTile[17].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-3.png.png"));
-				mapTile[18].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-4.png.png"));
-				mapTile[19].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-5.png.png"));
-				mapTile[20].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-6.png.png"));
-				mapTile[21].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-7.png.png"));
-				mapTile[22].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sprite-HardModeWalls/HardModeTileSkinny-8.png.png"));
+				mapTile[15].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTileSkinny-1.png.png"));
+				mapTile[16].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTileSkinny-2.png.png"));
+				mapTile[17].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTileSkinny-3.png.png"));
+				mapTile[18].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTileSkinny-4.png.png"));
+				mapTile[19].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTileSkinny-5.png.png"));
+				mapTile[20].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTileSkinny-6.png.png"));
+				mapTile[21].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTileSkinny-7.png.png"));
+				mapTile[22].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sprite-HardModeWalls/HardModeTileSkinny-8.png.png"));
 			}
 			else {
-				mapTile[0].image= ImageIO.read(getClass().getResourceAsStream("/tile/BackgroundBlack.png"));
-				mapTile[1].image= ImageIO.read(getClass().getResourceAsStream("/tile/BackgroundBlack.png")); // teleporter to opposite side
-				mapTile[2].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sideways-D.png"));
-				mapTile[3].image= ImageIO.read(getClass().getResourceAsStream("/tile/UpWall-L.png"));		
-				mapTile[4].image= ImageIO.read(getClass().getResourceAsStream("/tile/UpWall-R.png"));
-				mapTile[5].image= ImageIO.read(getClass().getResourceAsStream("/tile/Corner-UpR.png"));	
-				mapTile[6].image= ImageIO.read(getClass().getResourceAsStream("/tile/Corner-UpL.png"));	
-				mapTile[7].image= ImageIO.read(getClass().getResourceAsStream("/tile/Corner-DownR.png"));	
-				mapTile[8].image= ImageIO.read(getClass().getResourceAsStream("/tile/Corner-DownL.png"));
-				mapTile[9].image= ImageIO.read(getClass().getResourceAsStream("/tile/Sideways-U.png"));
+				mapTile[0].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/BackgroundBlack.png"));
+				mapTile[1].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/BackgroundBlack.png")); // teleporter to opposite side
+				mapTile[2].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sideways-D.png"));
+				mapTile[3].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/UpWall-L.png"));
+				mapTile[4].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/UpWall-R.png"));
+				mapTile[5].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Corner-UpR.png"));
+				mapTile[6].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Corner-UpL.png"));
+				mapTile[7].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Corner-DownR.png"));
+				mapTile[8].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Corner-DownL.png"));
+				mapTile[9].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/Sideways-U.png"));
 				
-				mapTile[11].image= ImageIO.read(getClass().getResourceAsStream("/tile/InnerCorner-DownLeft.png"));
-				mapTile[12].image= ImageIO.read(getClass().getResourceAsStream("/tile/InnerCorner-DownRight.png"));
-				mapTile[13].image= ImageIO.read(getClass().getResourceAsStream("/tile/InnerCorner-UpLeft.png"));
-				mapTile[14].image= ImageIO.read(getClass().getResourceAsStream("/tile/InnerCorner-UpRight.png"));
+				mapTile[11].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/InnerCorner-DownLeft.png"));
+				mapTile[12].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/InnerCorner-DownRight.png"));
+				mapTile[13].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/InnerCorner-UpLeft.png"));
+				mapTile[14].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/InnerCorner-UpRight.png"));
 				
-				mapTile[15].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-1.png.png"));
-				mapTile[16].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-2.png.png"));
-				mapTile[17].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-3.png.png"));
-				mapTile[18].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-4.png.png"));
-				mapTile[19].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-5.png.png"));
-				mapTile[20].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-6.png.png"));
-				mapTile[21].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-7.png.png"));
-				mapTile[22].image= ImageIO.read(getClass().getResourceAsStream("/tile/TileSkinny-8.png.png"));
+				mapTile[15].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/TileSkinny-1.png.png"));
+				mapTile[16].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/TileSkinny-2.png.png"));
+				mapTile[17].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/TileSkinny-3.png.png"));
+				mapTile[18].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/TileSkinny-4.png.png"));
+				mapTile[19].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/TileSkinny-5.png.png"));
+				mapTile[20].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/TileSkinny-6.png.png"));
+				mapTile[21].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/TileSkinny-7.png.png"));
+				mapTile[22].image= ImageIO.read(getClass().getResourceAsStream("/pacman/tile/TileSkinny-8.png.png"));
 			}
 			
 			
@@ -103,7 +103,7 @@ public class MapManager {
 	}
 	public void loadMap() {
 		try {
-			InputStream is = getClass().getResourceAsStream("/maps/map01.txt");
+			InputStream is = getClass().getResourceAsStream("/pacman/maps/map01.txt");
 			BufferedReader br = new BufferedReader(new InputStreamReader(is));
 			
 			int col = 0;

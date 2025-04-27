@@ -27,14 +27,14 @@ public class PurpleGhost extends Entity{
 	
 	public void getImage() {
 		try {
-		up1 = 		ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PurpleGhost/PurpleGhostUp-1.png.png"));
-		down1 =	 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PurpleGhost/PurpleGhostDown-2.png.png"));
-		right1 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PurpleGhost/PurpleGhostRight-1.png.png"));
-		right2 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PurpleGhost/PurpleGhostRight-2.png.png"));
-		right3 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PurpleGhost/PurpleGhostRight-3.png.png"));
-		left1 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PurpleGhost/PurpleGhostLeft-1.png.png"));
-		left2 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PurpleGhost/PurpleGhostLeft-2.png.png"));
-		left3 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PurpleGhost/PurpleGhostLeft-3.png.png"));
+		up1 = 		ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PurpleGhost/PurpleGhostUp-1.png.png"));
+		down1 =	 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PurpleGhost/PurpleGhostDown-2.png.png"));
+		right1 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PurpleGhost/PurpleGhostRight-1.png.png"));
+		right2 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PurpleGhost/PurpleGhostRight-2.png.png"));
+		right3 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PurpleGhost/PurpleGhostRight-3.png.png"));
+		left1 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PurpleGhost/PurpleGhostLeft-1.png.png"));
+		left2 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PurpleGhost/PurpleGhostLeft-2.png.png"));
+		left3 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PurpleGhost/PurpleGhostLeft-3.png.png"));
 		}
 		catch(IOException e) {
 			e.printStackTrace();

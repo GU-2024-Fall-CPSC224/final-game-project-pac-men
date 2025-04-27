@@ -28,14 +28,14 @@ public PinkGhost(Game gm) {
 	}
 	public void getImage() {
 		try {
-		up1 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PinkGhost/PinkGhostUp-1.png.png"));
-		down1 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PinkGhost/PinkGhostDown-1.png.png"));
-		right1 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PinkGhost/PinkGhostRight-1.png.png"));
-		right2 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PinkGhost/PinkGhostRight-2.png.png"));
-		right3 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PinkGhost/PinkGhostRight-3.png.png"));
-		left1 =ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PinkGhost/PinkGhostLeft-1.png.png"));
-		left2 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PinkGhost/PinkGhostLeft-2.png.png"));
-		left3 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-PinkGhost/PinkGhostLeft-3.png.png"));
+		up1 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PinkGhost/PinkGhostUp-1.png.png"));
+		down1 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PinkGhost/PinkGhostDown-1.png.png"));
+		right1 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PinkGhost/PinkGhostRight-1.png.png"));
+		right2 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PinkGhost/PinkGhostRight-2.png.png"));
+		right3 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PinkGhost/PinkGhostRight-3.png.png"));
+		left1 =ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PinkGhost/PinkGhostLeft-1.png.png"));
+		left2 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PinkGhost/PinkGhostLeft-2.png.png"));
+		left3 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-PinkGhost/PinkGhostLeft-3.png.png"));
 		}
 		catch(IOException e) {
 			e.printStackTrace();

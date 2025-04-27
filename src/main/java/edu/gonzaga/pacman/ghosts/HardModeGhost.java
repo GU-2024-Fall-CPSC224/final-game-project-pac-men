@@ -25,16 +25,16 @@ public HardModeGhost(Game gm) {
 }
 public void getImage() {
 	try {
-	up1 = 		ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-HardModeGhost/HardModeGhostRight-1.png.png"));
-	down1 =	 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-HardModeGhost/HardModeGhostRight-2.png.png"));
-	right1 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-HardModeGhost/HardModeGhostRight-1.png.png"));
-	right2 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-HardModeGhost/HardModeGhostRight-2.png.png"));
-	right3 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-HardModeGhost/HardModeGhostRight-3.png.png"));
-	right4 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-HardModeGhost/HardModeGhostRight-4.png.png"));
-	left1 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-HardModeGhost/HardModeGhostRight-1.png.png"));
-	left2 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-HardModeGhost/HardModeGhostRight-2.png.png"));
-	left3 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-HardModeGhost/HardModeGhostRight-3.png.png"));
-	left4 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-HardModeGhost/HardModeGhostRight-4.png.png"));
+	up1 = 		ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-HardModeGhost/HardModeGhostRight-1.png.png"));
+	down1 =	 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-HardModeGhost/HardModeGhostRight-2.png.png"));
+	right1 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-HardModeGhost/HardModeGhostRight-1.png.png"));
+	right2 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-HardModeGhost/HardModeGhostRight-2.png.png"));
+	right3 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-HardModeGhost/HardModeGhostRight-3.png.png"));
+	right4 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-HardModeGhost/HardModeGhostRight-4.png.png"));
+	left1 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-HardModeGhost/HardModeGhostRight-1.png.png"));
+	left2 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-HardModeGhost/HardModeGhostRight-2.png.png"));
+	left3 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-HardModeGhost/HardModeGhostRight-3.png.png"));
+	left4 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-HardModeGhost/HardModeGhostRight-4.png.png"));
 	}
 	catch(IOException e) {
 		e.printStackTrace();

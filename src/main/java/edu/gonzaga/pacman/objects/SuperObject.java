@@ -30,16 +30,16 @@ public class SuperObject {
 		pelletMapNum = new int[gm.columnCount][gm.rowCount];
 		try {
 		pelletTypes[1] = new OBJ_Pellet();
-		pelletTypes[1].image=ImageIO.read(getClass().getResourceAsStream("/objects/Pellet-S.png"));
+		pelletTypes[1].image=ImageIO.read(getClass().getResourceAsStream("/pacman/objects/Pellet-S.png"));
 		pelletTypes[2] = new OBJ_Power_Pellet();
-		pelletTypes[2].image=ImageIO.read(getClass().getResourceAsStream("/objects/Pellet-L.png"));
+		pelletTypes[2].image=ImageIO.read(getClass().getResourceAsStream("/pacman/objects/Pellet-L.png"));
 		}
 		catch(IOException e) {
 			e.printStackTrace();		}
 		
 	
 		try {
-			InputStream is = getClass().getResourceAsStream("/maps/pelletmap.txt");
+			InputStream is = getClass().getResourceAsStream("/pacman/maps/pelletmap.txt");
 			BufferedReader br = new BufferedReader(new InputStreamReader(is));
 			
 			int col = 0;

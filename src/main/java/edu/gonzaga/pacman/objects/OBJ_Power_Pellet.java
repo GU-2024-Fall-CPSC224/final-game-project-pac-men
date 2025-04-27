@@ -8,7 +8,7 @@ public class OBJ_Power_Pellet extends SuperObject{
 	public OBJ_Power_Pellet() {
 		name = "Power Pellet";
 		try {
-			image = ImageIO.read(getClass().getResourceAsStream("/objects/Pellet-L.png"));
+			image = ImageIO.read(getClass().getResourceAsStream("/pacman/objects/Pellet-L.png"));
 		}
 		catch(IOException e) {
 			e.printStackTrace();

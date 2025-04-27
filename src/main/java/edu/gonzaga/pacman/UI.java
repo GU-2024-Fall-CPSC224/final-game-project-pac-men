@@ -6,7 +6,6 @@ import java.awt.FontFormatException;
 import java.awt.Graphics2D;
 import java.awt.GraphicsEnvironment;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -24,11 +23,11 @@ public class UI {
 	Graphics2D g2;
 	public UI (Game gm) {
 		try {
-			 ft = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/fonts/Joystix.TTF")).deriveFont(30f).deriveFont(Font.BOLD);
-			 tscreenFt = Font.createFont(Font.TRUETYPE_FONT,getClass().getResourceAsStream("/fonts/CrackMan.TTF")).deriveFont(30f).deriveFont(Font.BOLD);
+			 ft = Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/pacman/fonts/Joystix.TTF")).deriveFont(30f).deriveFont(Font.BOLD);
+			 tscreenFt = Font.createFont(Font.TRUETYPE_FONT,getClass().getResourceAsStream("/pacman/fonts/CrackMan.TTF")).deriveFont(30f).deriveFont(Font.BOLD);
 			GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-			ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/fonts/Joystix.TTF")));
-			ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/fonts/CrackMan.TTF")));
+			ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/pacman/fonts/Joystix.TTF")));
+			ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, getClass().getResourceAsStream("/pacman/fonts/CrackMan.TTF")));
 		}
 		catch(IOException | FontFormatException e) {
 			System.out.print("FAILED: ");
@@ -48,9 +47,9 @@ public class UI {
 	}
 	public void getImages() {
 		try {
-			button1 = ImageIO.read(getClass().getResourceAsStream("/objects/Button.png"));
-			button2 = ImageIO.read(getClass().getResourceAsStream("/objects/Button(selected).png"));
-			lives = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Up1.png"));
+			button1 = ImageIO.read(getClass().getResourceAsStream("/pacman/objects/Button.png"));
+			button2 = ImageIO.read(getClass().getResourceAsStream("/pacman/objects/Button(selected).png"));
+			lives = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Up1.png"));
 			
 		}
 		catch(IOException e) {

@@ -29,14 +29,14 @@ public class OrangeGhost extends Entity{
 	}
 	public void getImage() {
 		try {
-		up1 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-OrangeGhostV2/OrangeGhostVertical-1.png.png"));
-		down1 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-OrangeGhostV2/OrangeGhostVertical-2.png.png"));
-		right1 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-OrangeGhostV2/OrangeGhostRightV2-1.png.png"));
-		right2 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-OrangeGhostV2/OrangeGhostRightV2-2.png.png"));
-		right3 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-OrangeGhostV2/OrangeGhostRightV2-3.png.png"));
-		left1 =ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-OrangeGhostV2/OrangeGhostLeftV2-1.png.png"));
-		left2 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-OrangeGhostV2/OrangeGhostLeftV2-2.png.png"));
-		left3 = ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-OrangeGhostV2/OrangeGhostLeftV2-3.png.png"));
+		up1 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-OrangeGhostV2/OrangeGhostVertical-1.png.png"));
+		down1 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-OrangeGhostV2/OrangeGhostVertical-2.png.png"));
+		right1 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-OrangeGhostV2/OrangeGhostRightV2-1.png.png"));
+		right2 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-OrangeGhostV2/OrangeGhostRightV2-2.png.png"));
+		right3 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-OrangeGhostV2/OrangeGhostRightV2-3.png.png"));
+		left1 =ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-OrangeGhostV2/OrangeGhostLeftV2-1.png.png"));
+		left2 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-OrangeGhostV2/OrangeGhostLeftV2-2.png.png"));
+		left3 = ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-OrangeGhostV2/OrangeGhostLeftV2-3.png.png"));
 		}
 		catch(IOException e) {
 			e.printStackTrace();

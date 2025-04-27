@@ -32,36 +32,36 @@ public class Player extends Entity {
 	}
 	public void getPlayerImage() {
 		try {
-			up1 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-1.png"));
-			up2 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Up1.png"));
-			up3 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Up2.png"));
-			up4 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Up1.png"));
-			down1 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-1.png"));
-			down2 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-1.png"));
-			down3 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-1.png"));
-			down4 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-1.png"));
-			right1 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-1.png"));
-			right2 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Right1.png"));
-			right3 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Right2.png"));
-			right4 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Right1.png"));
-			left1 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-1.png"));
-			left2 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Left1.png"));
-			left3 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Left2.png"));
-			left4 = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Left1.png"));
+			up1 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
+			up2 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Up1.png"));
+			up3 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Up2.png"));
+			up4 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Up1.png"));
+			down1 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
+			down2 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
+			down3 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
+			down4 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
+			right1 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
+			right2 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Right1.png"));
+			right3 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Right2.png"));
+			right4 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Right1.png"));
+			left1 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
+			left2 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Left1.png"));
+			left3 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Left2.png"));
+			left4 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Left1.png"));
 			
-			death1 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-1.png"));
-			death2 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Up1.png"));
-			death3 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Death3.png"));
-			death4 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Death4.png"));
-			death5 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Death5.png"));
-			death6 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Death6.png"));
-			death7 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Death7.png"));
-			death8 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Death8.png"));
-			death9 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Death9.png"));
-			death10 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Death10.png"));
-			death11 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Death11.png"));
-			death12 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Death12.png"));
-			death13 =ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Death13.png"));
+			death1 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
+			death2 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Up1.png"));
+			death3 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Death3.png"));
+			death4 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Death4.png"));
+			death5 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Death5.png"));
+			death6 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Death6.png"));
+			death7 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Death7.png"));
+			death8 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Death8.png"));
+			death9 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Death9.png"));
+			death10 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Death10.png"));
+			death11 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Death11.png"));
+			death12 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Death12.png"));
+			death13 =ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Death13.png"));
 			
 			
 			

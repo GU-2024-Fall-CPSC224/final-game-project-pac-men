@@ -31,14 +31,14 @@ public class CyanGhost extends Entity{
 	}
 	public void getImage() {
 		try {
-		up1 = 		ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-CyanGhost/CyanGhostUp-1.png.png"));
-		down1 =	 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-CyanGhost/CyanGhostDown-1.png.png"));
-		right1 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-CyanGhost/CyanGhostRight-1.png.png"));
-		right2 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-CyanGhost/CyanGhostRight-2.png.png"));
-		right3 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-CyanGhost/CyanGhostRight-3.png.png"));
-		left1 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-CyanGhost/CyanGhostLeft-1.png.png"));
-		left2 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-CyanGhost/CyanGhostLeft-2.png.png"));
-		left3 = 	ImageIO.read(getClass().getResourceAsStream("/ghosts/Sprite-CyanGhost/CyanGhostLeft-3.png.png"));
+		up1 = 		ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-CyanGhost/CyanGhostUp-1.png.png"));
+		down1 =	 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-CyanGhost/CyanGhostDown-1.png.png"));
+		right1 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-CyanGhost/CyanGhostRight-1.png.png"));
+		right2 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-CyanGhost/CyanGhostRight-2.png.png"));
+		right3 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-CyanGhost/CyanGhostRight-3.png.png"));
+		left1 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-CyanGhost/CyanGhostLeft-1.png.png"));
+		left2 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-CyanGhost/CyanGhostLeft-2.png.png"));
+		left3 = 	ImageIO.read(getClass().getResourceAsStream("/pacman/ghosts/Sprite-CyanGhost/CyanGhostLeft-3.png.png"));
 		}
 		catch(IOException e) {
 			e.printStackTrace();

@@ -43,9 +43,9 @@ public class UI {
 	}
 	public void getImages() {
 		try {
-			button1 = ImageIO.read(getClass().getResourceAsStream("/objects/Button.png"));
-			button2 = ImageIO.read(getClass().getResourceAsStream("/objects/Button(selected).png"));
-			lives = ImageIO.read(getClass().getResourceAsStream("/player/Sprite-PacMan/PacMan-Up1.png"));
+			button1 = ImageIO.read(getClass().getResourceAsStream("/pacman/objects/Button.png"));
+			button2 = ImageIO.read(getClass().getResourceAsStream("/pacman/objects/Button(selected).png"));
+			lives = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Up1.png"));
 			
 		}
 		catch(IOException e) {
