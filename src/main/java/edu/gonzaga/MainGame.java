@@ -12,26 +12,61 @@
  */
 package edu.gonzaga;
 
-import javax.swing.JFrame;
-
-import edu.gonzaga.pong.GameSettings;
-import edu.gonzaga.pong.MainMenuScreen;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /** Main program class for launching your team's program. */
 public class MainGame {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Pong Game");
+        // Setup main frame
+        JFrame frame = new JFrame("Game Launcher");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(false);
-        
-        GameSettings settings = new GameSettings();
-        
-        MainMenuScreen mainMenu = new MainMenuScreen(settings);
-        frame.add(mainMenu);
-        
-        frame.pack();
-        frame.setSize(800, 600);
+        frame.setSize(400, 300);
         frame.setLocationRelativeTo(null);
+        frame.setLayout(new GridLayout(4, 1, 10, 10)); // 4 rows, 1 column
+
+        // Title label
+        JLabel titleLabel = new JLabel("Select a Game", SwingConstants.CENTER);
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        frame.add(titleLabel);
+
+        // PacMan Button
+        JButton pacManButton = new JButton("Play PacMan");
+        pacManButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose(); // Close launcher window
+                edu.gonzaga.pacman.PacMan.main(new String[]{}); // Start PacMan
+            }
+        });
+        frame.add(pacManButton);
+
+        // Flappy Bird Button
+        JButton flappyButton = new JButton("Play Flappy Bird");
+        flappyButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                try {
+                    edu.gonzaga.flappybird.App.main(new String[]{}); // Start Flappy Bird
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
+        frame.add(flappyButton);
+
+        // Pong Button
+        JButton pongButton = new JButton("Play Pong");
+        pongButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                edu.gonzaga.pong.PongGame.main(new String[]{}); // Start Pong
+            }
+        });
+        frame.add(pongButton);
+
         frame.setVisible(true);
     }
 }
+
