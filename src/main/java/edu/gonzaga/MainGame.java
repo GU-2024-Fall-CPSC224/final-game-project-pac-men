@@ -16,6 +16,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import edu.gonzaga.NewPong.Pong;
 
 /** Main program class for launching your team's program. */
 public class MainGame {
@@ -61,7 +62,7 @@ public class MainGame {
         pongButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                edu.gonzaga.pong.PongGame.main(new String[]{}); // Start Pong
+                Pong.main(new String[]{}); // Start new Pong implementation
             }
         });
         frame.add(pongButton);
