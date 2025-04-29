@@ -1,6 +1,7 @@
 package edu.gonzaga.flappybird;
 
 import javax.swing.*;
+import java.awt.event.KeyEvent;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -14,7 +15,7 @@ public class App {
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        FlappyBird flappyBird = new FlappyBird();
+        FlappyBird flappyBird = new FlappyBird(frame);
         frame.add(flappyBird);
         frame.pack(); // factor in title bar to dimension calculations
         flappyBird.requestFocus();
