@@ -45,7 +45,7 @@ class GameWindow extends JFrame {
         int height = arcadeImage.getHeight();
 
         // Configure frame (normal window with title bar)
-        setTitle("Arcade Launcher");
+        setTitle("Arcade Games");
         setSize(width, height);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);

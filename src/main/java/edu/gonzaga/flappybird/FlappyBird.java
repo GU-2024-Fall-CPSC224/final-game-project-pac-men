@@ -150,12 +150,14 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
                     textHeight = pipe.y + Pipe.height + boardHeight/8 + 5;
                 }
                 gameOver = true;
+                repaint();
             }
         }
 
         if (bird.y > boardHeight) {
             gameOver = true;
             textHeight = boardHeight/2 - 20;
+            repaint();
         }
     }
 
