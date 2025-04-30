@@ -7,8 +7,9 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import edu.gonzaga.pacman.Game;
+import edu.gonzaga.pacman.UserInput;
 import edu.gonzaga.pacman.ghosts.DeadGhost;
-import edu.gonzaga.pacman.*;
 
 public class Player extends Entity {
 	BufferedImage right4,left4,down2,down3,down4,up2,up3,up4,death1,death2,death3,death4,death5,death6,death7,death8,death9,death10,death11,death12,death13;

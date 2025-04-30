@@ -5,7 +5,7 @@ import javax.swing.JFrame;
 public class Pong {
     public static void main(String[] args) {
         
-        JFrame frame = new JFrame("Simple Pong Game");
+        JFrame frame = new JFrame("Pong Game");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(800, 600);
         frame.setResizable(false);

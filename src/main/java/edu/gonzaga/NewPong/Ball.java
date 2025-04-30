@@ -9,6 +9,7 @@ public class Ball {
     public int height = 20;
     public int speedX = 5;
     public int speedY = 5;
+    private int hitCount = 0;  // Tracks # of hits
 
     public Ball(int startX, int startY) {
         this.x = startX;
@@ -26,6 +27,21 @@ public class Ball {
 
     public void bounceHorizontal() {
         speedX = -speedX;
+        hitCount++;
+        
+        // Increase ball speed every 2 hits (makes it slower than having the increase just be 1)
+        if (hitCount % 2 == 0) {
+            if (speedX > 0) {
+                speedX += 1;
+            } else {
+                speedX -= 1;
+            }
+            if (speedY > 0) {
+                speedY += 1;
+            } else {
+                speedY -= 1;
+            }
+        }
     }
 
     public void draw(Graphics g) {
