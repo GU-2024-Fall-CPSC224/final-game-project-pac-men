@@ -37,7 +37,8 @@ public class UserInput implements KeyListener{
 				if(gm.ui.selectedButton ==0 ) {
 					gm.gameState = gm.playState;}
 				else if (gm.ui.selectedButton ==1) {
-					gm.gameState = gm.startScreenState;
+					gm.frame.dispose();
+		            edu.gonzaga.MainGame.main(new String[]{});
 				}
 				else if (gm.ui.selectedButton ==2 ) {
 					System.exit(0);

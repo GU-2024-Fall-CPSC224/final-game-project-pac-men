@@ -121,7 +121,7 @@ public class UI {
 			text = "Resume";
 			break;
 		case 1:
-			text = "Settings";
+			text = "Main Menu";
 			break;
 		case 2:
 			text = "Exit";
@@ -186,13 +186,24 @@ public class UI {
 	}
 
 	private void drawEndScreen() {
-		// TODO Auto-generated method stub
+		g2.setFont(tscreenFt.deriveFont(120f));
+		g2.setColor(Color.yellow);
+		int length = (int) g2.getFontMetrics().getStringBounds("You Died", g2).getWidth();
+		int x = gm.boardWidth/2 - length/2;
+		int y = gm.boardHeight/6;
+		g2.drawString("You Died", x, y);
+		
+		g2.setFont(ft);
+		length = (int) g2.getFontMetrics().getStringBounds("SCORE: " + gm.score, g2).getWidth();
+		y = gm.boardHeight/4-32;
+		x = gm.boardWidth/2 - length/2;
+		g2.setColor(Color.GRAY);
+		g2.drawString("SCORE: " + gm.score, x+2, y+2);
+		g2.setColor(Color.white);
+		g2.drawString("SCORE: " + gm.score, x,y);
+		
 		
 	}
-//	private void drawSettingsScreen() {
-//		// TODO Auto-generated method stub
-//		
-//	}
 	private void drawDeathAnimation() {
 		
 	}

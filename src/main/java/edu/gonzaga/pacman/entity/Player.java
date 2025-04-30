@@ -38,9 +38,9 @@ public class Player extends Entity {
 			up3 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Up2.png"));
 			up4 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Up1.png"));
 			down1 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
-			down2 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
-			down3 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
-			down4 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
+			down2 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Down1.png"));
+			down3 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Down2.png"));
+			down4 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Down1.png"));
 			right1 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-1.png"));
 			right2 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Right1.png"));
 			right3 = ImageIO.read(getClass().getResourceAsStream("/pacman/player/Sprite-PacMan/PacMan-Right2.png"));
