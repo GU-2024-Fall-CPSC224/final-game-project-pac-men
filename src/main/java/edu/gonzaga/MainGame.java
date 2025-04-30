@@ -24,7 +24,7 @@ import javax.swing.SwingConstants;
 
 import edu.gonzaga.NewPong.Pong;
 
-/** Main program class for launching your team's program. */
+/** Main program class for launching the 'Game Launcher'. */
 public class MainGame {
     public static void main(String[] args) {
         // Setup main frame

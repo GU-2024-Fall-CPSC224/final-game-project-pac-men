@@ -10,6 +10,7 @@ import javax.swing.*;
 
 public class FlappyBird extends JPanel implements ActionListener, KeyListener {
 
+    private JFrame frame;
     public static int boardWidth = 360;
     public static int boardHeight = 640;
 
@@ -34,7 +35,8 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
     double score = 0; // this is a double because we want to be able to add 0.5, to easily handle the logic of two pipes (top & bottom) being treated as one
     int textHeight = boardHeight/2;
 
-    FlappyBird() {
+    FlappyBird(JFrame frame) {
+        this.frame = frame;
         setPreferredSize(new Dimension(boardWidth, boardHeight));
         setBackground(Color.blue);
 
@@ -183,12 +185,12 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
     public void keyPressed(KeyEvent e) {
         if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 
-            // System.out.println("JUMP!");
+            // System.out.println("JUMP");
             velocityY = -9;
 
             if (gameOver) {
                 //restart game by resetting conditions
-                bird.y = FlappyBird.boardHeight/2;
+                bird.y = FlappyBird.boardHeight / 2;
                 velocityY = 0;
                 pipes.clear();
                 gameOver = false;
@@ -200,6 +202,10 @@ public class FlappyBird extends JPanel implements ActionListener, KeyListener {
             if (!gameStarted) {
                 gameStarted = true;
             }
+        }
+        if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+            frame.dispose();
+            edu.gonzaga.MainGame.main(new String[]{});
         }
     }
 
